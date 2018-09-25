@@ -17,8 +17,12 @@ namespace postgresql_entity.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
-
+            using (frankieContext db = new frankieContext())
+            {
+               TestTable test =  db.TestTable.Where(t => t.Id == 3).FirstOrDefault();
+               ViewData["Message"] = test.TestColumn.ToString();
+            }
+               
             return View();
         }
 

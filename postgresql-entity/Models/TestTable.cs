@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace postgresql-entity.Models
+namespace postgresql_entity.Models
 {
     public partial class TestTable
     {
